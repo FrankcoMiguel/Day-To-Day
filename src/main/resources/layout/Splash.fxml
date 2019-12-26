@@ -2,13 +2,13 @@
 
 <?import com.jfoenix.controls.JFXProgressBar?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="60.0" stylesheets="@../css/splash.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="main" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="60.0" stylesheets="@../css/splash.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SplashController">
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -30,12 +30,12 @@
       </HBox>
       <VBox alignment="CENTER" spacing="20.0">
          <children>
-            <JFXProgressBar prefHeight="16.0" prefWidth="673.0" progress="0.6" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="63%">
+            <JFXProgressBar fx:id="loader" prefHeight="9.0" prefWidth="670.0" progress="0.0" secondaryProgress="0.0" />
+            <Label fx:id="loader_status" styleClass="text" text="63%">
                <font>
-                  <Font name="CoolveticaRg-Regular" size="25.0" />
+                  <Font name="CoolveticaRg-Regular" size="22.0" />
                </font>
-            </Text>
+            </Label>
          </children>
       </VBox>
    </children>
