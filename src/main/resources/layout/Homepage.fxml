@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
@@ -11,20 +13,29 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="main" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="15.0" stylesheets="@../css/homepage.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomepageController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="15.0" stylesheets="@../css/homepage.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomepageController">
     <children>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
             <children>
-            <ImageView pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="settings" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../media/settings-unselected.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="DAY_TO_DAY">
                     <font>
                         <Font name="CoolveticaRg-Regular" size="70.0" />
                     </font>
                 </Text>
+            <Separator prefHeight="0.0" prefWidth="556.0" visible="false" />
+            <FontAwesomeIconView fx:id="closeButton" fill="#6c5b7b" glyphName="CLOSE" size="34" styleClass="close-button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
             </children>
          <VBox.margin>
             <Insets />
@@ -32,7 +43,7 @@
         </HBox>
       <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="50.0" spacing="20.0">
          <children>
-            <JFXButton prefHeight="75.0" prefWidth="193.0" ripplerFill="#c06c84" text="New Task">
+            <JFXButton fx:id="newTaskButton" prefHeight="75.0" prefWidth="193.0" ripplerFill="#c06c84" text="New Task">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -43,7 +54,7 @@
                   <Font name="CoolveticaRg-Regular" size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="40.0" layoutY="71.0" prefHeight="75.0" prefWidth="212.0" ripplerFill="#c06c84" text="Complete Task">
+            <JFXButton fx:id="completeTaskButton" layoutX="40.0" layoutY="71.0" prefHeight="75.0" prefWidth="212.0" ripplerFill="#c06c84" text="Complete Task">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
@@ -51,7 +62,7 @@
                   <Font name="CoolveticaRg-Regular" size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="253.0" layoutY="71.0" prefHeight="75.0" prefWidth="204.0" ripplerFill="#c06c84" text="Remove Task">
+            <JFXButton fx:id="removeTaskButton" layoutX="253.0" layoutY="71.0" prefHeight="75.0" prefWidth="204.0" ripplerFill="#c06c84" text="Remove Task">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
@@ -89,7 +100,7 @@
       <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="313.0" prefHeight="3.0" prefWidth="190.0" spacing="20.0" styleClass="line" />
       <ScrollPane hbarPolicy="NEVER" prefHeight="392.0" prefWidth="1120.0">
          <content>
-            <VBox prefHeight="400.0" prefWidth="1118.0" styleClass="scroll-pane-content" />
+            <VBox fx:id="scrollBarContainer" prefHeight="392.0" prefWidth="1118.0" styleClass="scroll-pane-content" />
          </content>
       </ScrollPane>
     </children>

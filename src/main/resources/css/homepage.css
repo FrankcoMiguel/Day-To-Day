@@ -58,3 +58,16 @@
     -fx-background-color: #F8B195;
     -fx-background-radius: 5em;
 }
+
+
+.close-button{
+
+    -fx-fill: #6c5b7b;
+
+}
+
+.close-button:hover{
+
+    -fx-fill: #C06C84;
+
+}

@@ -44,7 +44,7 @@ public abstract class LoaderController extends Task<Integer> {
             updateMessage("Getting your tasks");
 
         }
-        else if (loading >= 99){
+        else if (loading == 100){
 
             updateMessage("Welcome back!");
 

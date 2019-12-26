@@ -1,13 +1,11 @@
 package Controller;
 
 import com.jfoenix.controls.JFXProgressBar;
-import javafx.concurrent.WorkerStateEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -49,7 +47,7 @@ public class SplashController implements Initializable{
         splash_loading.setOnSucceeded(event -> {
 
             ControllerHelper controllerHelper = new ControllerHelper();
-            controllerHelper.switchSplash(loader);
+            controllerHelper.switchSplash(loader_status);
 
         });
 

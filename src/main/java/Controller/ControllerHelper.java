@@ -1,14 +1,17 @@
 package Controller;
 
 
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -42,14 +45,20 @@ public class ControllerHelper {
 
     }
 
+    static void closeApp(FontAwesomeIconView closeButton){
+
+        closeButton.setOnMouseClicked(event -> System.exit(0));
+
+    }
+
     void switchSplash(Node control){
 
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("../layout/Splash.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../layout/Homepage.fxml"));
             root.translateXProperty().set(control.getScene().getWidth());
             Pane pane = (Pane) control.getScene().getRoot();
-            pane.getChildren().removeAll(); //Improvement of Performance: Deleting all previous nodes before set the next Parent
+            pane.getChildren().clear();
             pane.getChildren().add(root);
 
             Timeline timeline = new Timeline();
