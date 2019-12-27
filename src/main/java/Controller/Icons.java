@@ -2,8 +2,10 @@ package Controller;
 
 public enum Icons {
 
-    SELECTED("../media/settings-selected"),
-    UNSELECTED("../media/settings-unselected");
+    SETTING_SELECTED("../media/settings-selected.png"),
+    SETTING_UNSELECTED("../media/settings-unselected.png"),
+    CHECKBOX_SELECTED("../media/checkbox-selected.png"),
+    CHECKBOX_UNSELECTED("../media/checkbox-unselected.png");
 
     private final String url;
 
