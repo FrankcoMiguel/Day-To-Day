@@ -7,6 +7,35 @@
     <groupId>com.aftechnology.day-to-day</groupId>
     <artifactId>Day-To-Day</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-    
+    <dependencies>
+    <!-- Font Awesome 8.9 - Icons Art -->
+    <dependency>
+        <groupId>de.jensd</groupId>
+        <artifactId>fontawesomefx</artifactId>
+        <version>8.9</version>
+    </dependency>
+
+    <!-- JFoenix 9.0.9 Great Controls like Buttons, Text fields, etc.. -->
+    <dependency>
+        <groupId>com.jfoenix</groupId>
+        <artifactId>jfoenix</artifactId>
+        <version>8.0.9</version>
+    </dependency>
+
+    </dependencies>
+
+
 </project>
