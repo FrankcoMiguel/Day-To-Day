@@ -5,34 +5,39 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="1025.0" stylesheets="@../css/task.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TaskController">
+
+<HBox prefHeight="101.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TaskController">
    <children>
-      <HBox alignment="CENTER" layoutY="1.0" prefHeight="100.0" prefWidth="224.0">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="1092.0" styleClass="root" stylesheets="@../css/task.css">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK">
-               <font>
-                  <Font name="CoolveticaRg-Regular" size="25.0" />
-               </font>
-            </Text>
+            <HBox alignment="CENTER" layoutY="1.0" prefHeight="100.0" prefWidth="226.0">
+               <children>
+                  <Text fx:id="status" strokeType="OUTSIDE" strokeWidth="0.0" text="CHECK">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="285.0" layoutY="1.0" prefHeight="100.0" prefWidth="496.0">
+               <children>
+                  <Text fx:id="task" strokeType="OUTSIDE" strokeWidth="0.0" text="Task" textAlignment="CENTER">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="819.0" layoutY="3.0" prefHeight="100.0" prefWidth="273.0">
+               <children>
+                  <Text fx:id="deadline" strokeType="OUTSIDE" strokeWidth="0.0" text="00/00/0000">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
          </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="237.0" layoutY="1.0" prefHeight="100.0" prefWidth="562.0">
-         <children>
-            <Text fx:id="task" strokeType="OUTSIDE" strokeWidth="0.0" text="Task" textAlignment="CENTER">
-               <font>
-                  <Font name="CoolveticaRg-Regular" size="25.0" />
-               </font>
-            </Text>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="813.0" layoutY="3.0" prefHeight="100.0" prefWidth="216.0">
-         <children>
-            <Text fx:id="deadline" strokeType="OUTSIDE" strokeWidth="0.0" text="00/00/0000">
-               <font>
-                  <Font name="CoolveticaRg-Regular" size="25.0" />
-               </font>
-            </Text>
-         </children>
-      </HBox>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</HBox>
