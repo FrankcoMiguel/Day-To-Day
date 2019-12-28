@@ -1,6 +1,8 @@
 package Controller;
 
 
+import Model.Task;
+import Service.TaskService;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -11,10 +13,14 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.IOException;
+import java.text.DateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class ControllerHelper {
 
@@ -71,6 +77,34 @@ public class ControllerHelper {
             e.printStackTrace();
 
         }
+
+    }
+
+    void setTasks(VBox container) throws IOException {
+
+        TaskService taskService = new TaskService();
+        List<Task> taskList = taskService.GetAll();
+
+        if (taskList != null){
+
+            for (Task task : taskList){
+
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../layout/Task.fxml"));
+                Parent root = loader.load();
+                Text status = (Text) loader.getNamespace().get("status");
+                Text taskname = (Text) loader.getNamespace().get("task");
+                Text deadline = (Text) loader.getNamespace().get("deadline");
+                status.setText(task.getStatus());
+                taskname.setText(task.getName());
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, YYYY");
+                deadline.setText(task.getDeadline().format(formatter));
+                container.getChildren().add(root);
+
+            }
+
+        }
+
+
 
     }
 

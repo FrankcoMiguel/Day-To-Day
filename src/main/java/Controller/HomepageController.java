@@ -1,5 +1,6 @@
 package Controller;
 
+import Service.TaskService;
 import com.jfoenix.controls.JFXButton;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.EventHandler;
@@ -11,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,17 +30,32 @@ public class HomepageController implements Initializable {
     @FXML
     protected FontAwesomeIconView closeButton;
 
+    private TaskService taskService;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        taskService = new TaskService();
         ControllerHelper.closeApp(closeButton);
+        try {
+
+            loadAllTasks();
+
+        } catch (IOException e) {
+
+            System.out.println("Error displaying tasks \n" + e);
+
+        }
 
     }
 
-    private void loadAllTasks(){
+    private void loadAllTasks() throws IOException {
 
-        //Task service..
-        //And settle on scrollBarContainer <VBox>
+        // GET ALL TASKS
+        taskService.GetAll();
+        ControllerHelper controllerHelper = new ControllerHelper();
+        controllerHelper.setTasks(scrollBarContainer);
+
 
     }
 
