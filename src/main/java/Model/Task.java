@@ -7,12 +7,19 @@ public class Task {
     private int Id;
     private String Name;
     private LocalDate Deadline;
-    private boolean Status;
+    private String Status;
 
-    public Task(String name, LocalDate deadline, boolean status) {
+    public Task(int id, String name, LocalDate deadline, String status) {
+        Id = id;
         Name = name;
         Deadline = deadline;
         Status = status;
+    }
+
+    public Task (){}
+
+    public void setId(int id) {
+        Id = id;
     }
 
     public int getId() {
@@ -35,16 +42,16 @@ public class Task {
         Deadline = deadline;
     }
 
-    public boolean isStatus() {
+    public String getStatus() {
         return Status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         Status = status;
     }
 
     @Override
-    public String toString() {
+    public String   toString() {
         return "Task{" +
                 "Id=" + Id +
                 ", Name='" + Name + '\'' +
@@ -52,4 +59,6 @@ public class Task {
                 ", Status=" + Status +
                 '}';
     }
+
+
 }

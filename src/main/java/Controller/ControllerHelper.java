@@ -1,6 +1,9 @@
 package Controller;
 
 
+import Model.Task;
+import Service.TaskService;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -10,10 +13,14 @@ import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.IOException;
+import java.text.DateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class ControllerHelper {
 
@@ -42,14 +49,20 @@ public class ControllerHelper {
 
     }
 
+    static void closeApp(FontAwesomeIconView closeButton){
+
+        closeButton.setOnMouseClicked(event -> System.exit(0));
+
+    }
+
     void switchSplash(Node control){
 
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("../layout/Splash.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../layout/Homepage.fxml"));
             root.translateXProperty().set(control.getScene().getWidth());
             Pane pane = (Pane) control.getScene().getRoot();
-            pane.getChildren().removeAll(); //Improvement of Performance: Deleting all previous nodes before set the next Parent
+            pane.getChildren().clear();
             pane.getChildren().add(root);
 
             Timeline timeline = new Timeline();
@@ -64,6 +77,34 @@ public class ControllerHelper {
             e.printStackTrace();
 
         }
+
+    }
+
+    void setTasks(VBox container) throws IOException {
+
+        TaskService taskService = new TaskService();
+        List<Task> taskList = taskService.GetAll();
+
+        if (taskList != null){
+
+            for (Task task : taskList){
+
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../layout/Task.fxml"));
+                Parent root = loader.load();
+                Text status = (Text) loader.getNamespace().get("status");
+                Text taskname = (Text) loader.getNamespace().get("task");
+                Text deadline = (Text) loader.getNamespace().get("deadline");
+                status.setText(task.getStatus());
+                taskname.setText(task.getName());
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, YYYY");
+                deadline.setText(task.getDeadline().format(formatter));
+                container.getChildren().add(root);
+
+            }
+
+        }
+
+
 
     }
 
