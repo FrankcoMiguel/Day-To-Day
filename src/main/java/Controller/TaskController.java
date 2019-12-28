@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 public class TaskController implements Initializable {
 
     @FXML
-    protected Text task, deadline;
+    protected Text task, deadline, status;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

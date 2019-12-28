@@ -8,7 +8,10 @@ import Model.Task;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 interface ITaskService {
@@ -17,7 +20,7 @@ interface ITaskService {
 
     boolean AddTask(Task task);
 
-    void GetAll();
+    List<Task> GetAll();
 
 }
 
@@ -67,7 +70,7 @@ public class TaskService implements ITaskService {
     }
 
     @Override
-    public void GetAll() {
+    public List<Task> GetAll() {
 
         List<Task> tasks = new ArrayList<>();
         try{
@@ -79,7 +82,7 @@ public class TaskService implements ITaskService {
                 Task task = new Task();
                 task.setId(resultSet.getInt(1));
                 task.setName(resultSet.getString(2));
-                task.setDeadline(resultSet.getDate(3).toLocalDate());
+                task.setDeadline(LocalDate.parse(resultSet.getString(3)));
                 task.setStatus(resultSet.getString(4));
                 tasks.add(task);
 
@@ -88,8 +91,11 @@ public class TaskService implements ITaskService {
         } catch (Exception e){
 
             System.out.println("Error getting all tasks from the table \n" + e);
+            e.printStackTrace();
 
         }
+
+        return tasks;
 
     }
 }
