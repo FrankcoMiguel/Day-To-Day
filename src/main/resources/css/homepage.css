@@ -71,3 +71,16 @@
     -fx-fill: #C06C84;
 
 }
+
+.settings-button{
+
+    -fx-image: url('../media/settings-unselected.png');
+
+}
+
+.settings-button:hover{
+
+    -fx-image: url('../media/settings-selected.png');
+
+}
+

@@ -17,7 +17,7 @@
     <children>
         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
             <children>
-            <ImageView fx:id="settings" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="settings" pickOnBounds="true" preserveRatio="true" styleClass="settings-button">
                <image>
                   <Image url="@../media/settings-unselected.png" />
                </image>
