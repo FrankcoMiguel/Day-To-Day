@@ -9,5 +9,6 @@ buildNumber.properties
 .mvn/timing.properties
 .idea/
 .DS_Store
+storage.db
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
