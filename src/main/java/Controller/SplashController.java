@@ -1,5 +1,6 @@
 package Controller;
 
+import Service.TaskService;
 import com.jfoenix.controls.JFXProgressBar;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -36,7 +37,8 @@ public class SplashController implements Initializable{
             @Override
             protected void loadTasks() {
 
-                // Get all tasks..
+                TaskService taskService = new TaskService();
+                taskService.CreateTaskTable();
 
             }
         };
