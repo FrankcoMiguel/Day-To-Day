@@ -3,6 +3,7 @@ package Controller;
 import Service.TaskService;
 import com.jfoenix.controls.JFXButton;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -47,6 +48,8 @@ public class HomepageController implements Initializable {
 
         }
 
+        createNewTask();
+
     }
 
     private void loadAllTasks() throws IOException {
@@ -56,6 +59,17 @@ public class HomepageController implements Initializable {
         ControllerHelper controllerHelper = new ControllerHelper();
         controllerHelper.setTasks(scrollBarContainer);
 
+
+    }
+
+    private void createNewTask(){
+
+        newTaskButton.setOnAction(event -> {
+
+            ControllerHelper controllerHelper = new ControllerHelper();
+            controllerHelper.switchStage(newTaskButton,"NewTask");
+
+        });
 
     }
 
