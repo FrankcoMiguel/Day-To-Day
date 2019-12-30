@@ -53,9 +53,10 @@ public class TaskService implements ITaskService {
         try {
 
             PreparedStatement preparedStatement = dbConnection.getConnection().prepareStatement(TaskQueries.ADD.getQuery());
-            preparedStatement.setString(1,task.getName());
-            preparedStatement.setDate(2,java.sql.Date.valueOf(task.getDeadline()));
-            preparedStatement.setString(3,task.getStatus());
+            preparedStatement.setObject(1,null);
+            preparedStatement.setString(2,task.getName());
+            preparedStatement.setString(3,String.valueOf(task.getDeadline()));
+            preparedStatement.setString(4,task.getStatus());
             preparedStatement.executeUpdate();
             return true;
 
