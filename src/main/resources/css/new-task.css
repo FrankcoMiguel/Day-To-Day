@@ -1,0 +1,67 @@
+.root{
+
+    -fx-background-color: #355C7D;
+
+}
+
+.texts{
+
+ -fx-fill: #F8B195;
+
+}
+
+.button{
+
+    -fx-background-color: #6C5B7B;
+    -fx-background-radius: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 3, 0.0 , 0 , 1);
+
+}
+
+.back-arrow-button{
+
+    -fx-image: url('../media/back-arrow-unselected.png');
+
+}
+
+.back-arrow-button:hover{
+
+    -fx-image: url('../media/back-arrow-selected.png');
+
+}
+
+/* --------------- Text Field styles -------------- */
+
+.text-field{
+
+    -fx-font-family: Coolvetica Rg;
+    -fx-font-size: 28px;
+    -fx-prompt-text-fill: gray;
+    -fx-background-radius: 0px;
+    -fx-background-color: WHITE;
+    -fx-border-color: #707070;
+
+}
+
+
+
+/* --------------- Combo Box styles -------------- */
+
+
+.combo-box{
+
+    -fx-font-family: Coolvetica Rg;
+    -fx-font-size: 28px;
+    -fx-background-radius: 0px;
+    -fx-prompt-text-fill: gray;
+    -fx-background-color: WHITE;
+
+}
+
+.combo-box .text{
+
+    -fx-font-color: gray;
+
+}
+
+/* --------------- Date Picker styles -------------- */
