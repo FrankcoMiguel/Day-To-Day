@@ -108,6 +108,31 @@ public class ControllerHelper {
 
     }
 
+    void switchStage(Node control, String stage){
+
+        try {
+
+            Parent root = FXMLLoader.load(getClass().getResource("../layout/"+ (stage) + ".fxml"));
+            root.translateXProperty().set(control.getScene().getWidth());
+            Pane pane = (Pane) control.getScene().getRoot();
+            pane.getChildren().clear();
+            pane.getChildren().add(root);
+
+            Timeline timeline = new Timeline();
+            KeyValue kv = new KeyValue(root.translateXProperty(), 0, Interpolator.DISCRETE);
+            KeyFrame kf = new KeyFrame(Duration.millis(100), kv);
+            timeline.getKeyFrames().add(kf);
+            timeline.play();
+
+        } catch (IOException e) {
+
+            System.out.println("Error switching stages");
+            e.printStackTrace();
+
+        }
+
+    }
+
 
 
 
