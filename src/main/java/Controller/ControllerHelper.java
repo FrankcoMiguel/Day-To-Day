@@ -59,7 +59,7 @@ public class ControllerHelper {
 
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("../layout/Homepage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/layout/Homepage.fxml"));
             root.translateXProperty().set(control.getScene().getWidth());
             Pane pane = (Pane) control.getScene().getRoot();
             pane.getChildren().clear();
@@ -89,7 +89,7 @@ public class ControllerHelper {
 
             for (Task task : taskList){
 
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../layout/Task.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/layout/Task.fxml"));
                 Parent root = loader.load();
                 Text status = (Text) loader.getNamespace().get("status");
                 Text taskname = (Text) loader.getNamespace().get("task");
@@ -112,7 +112,7 @@ public class ControllerHelper {
 
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource("../layout/"+ (stage) + ".fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/layout/"+ (stage) + ".fxml"));
             root.translateXProperty().set(control.getScene().getWidth());
             Pane pane = (Pane) control.getScene().getRoot();
             pane.getChildren().clear();

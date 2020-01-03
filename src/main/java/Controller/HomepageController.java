@@ -38,7 +38,9 @@ public class HomepageController implements Initializable {
 
         taskService = new TaskService();
         ControllerHelper.closeApp(closeButton);
+
         try {
+
 
             loadAllTasks();
 
