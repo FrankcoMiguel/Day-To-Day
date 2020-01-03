@@ -18,7 +18,7 @@
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
          <children>
-            <ImageView fx:id="backButton" pickOnBounds="true" preserveRatio="true" styleClass="settings-button">
+            <ImageView fx:id="backButton" pickOnBounds="true" preserveRatio="true" styleClass="back-arrow-button">
                <image>
                   <Image url="@../media/back-arrow-unselected.png" />
                </image>
@@ -110,7 +110,7 @@
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="1080.0" spacing="10.0">
                            <children>
-                              <JFXDatePicker fx:id="date" defaultColor="#f8b195" promptText="Select a date" />
+                              <JFXDatePicker fx:id="date" defaultColor="#f8b195" promptText="Select a date" styleClass="date-picker" />
                            </children>
                         </HBox>
                      </children>

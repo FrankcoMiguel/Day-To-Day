@@ -30,6 +30,19 @@
 
 }
 
+.close-button{
+
+    -fx-fill: #6c5b7b;
+
+}
+
+.close-button:hover{
+
+    -fx-fill: #C06C84;
+
+}
+
+
 /* --------------- Text Field styles -------------- */
 
 .text-field{
@@ -65,3 +78,9 @@
 }
 
 /* --------------- Date Picker styles -------------- */
+
+.date-picker {
+
+    -fx-text-align: center;
+
+}
