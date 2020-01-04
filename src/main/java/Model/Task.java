@@ -9,8 +9,7 @@ public class Task {
     private LocalDate Deadline;
     private String Status;
 
-    public Task(int id, String name, LocalDate deadline, String status) {
-        Id = id;
+    public Task(String name, LocalDate deadline, String status) {
         Name = name;
         Deadline = deadline;
         Status = status;

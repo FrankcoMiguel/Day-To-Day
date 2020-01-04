@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="15.0" stylesheets="@../css/new-task.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NewTaskController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <ImageView fx:id="backButton" pickOnBounds="true" preserveRatio="true" styleClass="back-arrow-button">
+               <image>
+                  <Image url="@../media/back-arrow-unselected.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="texts" text="DAY_TO_DAY">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="70.0" />
+               </font>
+            </Text>
+            <Separator prefHeight="0.0" prefWidth="556.0" visible="false" />
+            <FontAwesomeIconView fx:id="closeButton" fill="#6c5b7b" glyphName="CLOSE" size="34" styleClass="close-button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <VBox prefHeight="491.0" prefWidth="1003.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Task name">
+                           <font>
+                              <Font name="CoolveticaRg-Regular" size="30.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#f67280" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                           <font>
+                              <Font name="CoolveticaRg-Regular" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="126.0" prefWidth="1080.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="1080.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="taskName" onKeyTyped="#getCharactersCount" prefHeight="66.0" prefWidth="589.0" promptText="What do you need to get done?">
+                                 <font>
+                                    <Font name="CoolveticaRg-Regular" size="28.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="82.0" prefWidth="821.0" spacing="10.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="40 characters max." textAlignment="RIGHT">
+                                 <font>
+                                    <Font name="CoolveticaRg-Regular" size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Deadline">
+                           <font>
+                              <Font name="CoolveticaRg-Regular" size="30.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#f67280" strokeType="OUTSIDE" strokeWidth="0.0" text="*">
+                           <font>
+                              <Font name="CoolveticaRg-Regular" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="126.0" prefWidth="1080.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="1080.0" spacing="10.0">
+                           <children>
+                              <JFXDatePicker fx:id="date" defaultColor="#f8b195" promptText="Select a date" styleClass="date-picker" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="50.0" layoutY="50.0" spacing="20.0">
+         <children>
+            <JFXButton fx:id="addTask" prefHeight="75.0" prefWidth="193.0" ripplerFill="#c06c84" text="Add it" textFill="#f8b195">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+   </padding>
+</VBox>
