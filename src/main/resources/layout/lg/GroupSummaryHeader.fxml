@@ -1,0 +1,23 @@
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="header" alignment="CENTER" prefHeight="56.0" prefWidth="360.0" spacing="30.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GroupSummaryHeaderController">
+    <children>
+        <Text fill="#707070" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="150.0">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Text>
+        <Text fill="#707070" layoutX="152.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tasks completed" textAlignment="CENTER" wrappingWidth="135.0">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Text>
+    </children>
+    <padding>
+        <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+    </padding></HBox>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<VBox fx:id="dashboard" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1300.0" spacing="10.0" stylesheets="@../../css/dashboard.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="116.0" prefWidth="1200.0">
+         <children>
+            <Text fx:id="greeting" fill="#ec892f" strokeType="OUTSIDE" strokeWidth="0.0" text="Good morning, Frank.">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <Text fx:id="date" fill="#707070" strokeType="OUTSIDE" strokeWidth="0.0" text="Today is Tuesday April 21, 2021">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" fillHeight="false" prefHeight="533.0" prefWidth="1200.0" spacing="25.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="450.0" prefWidth="559.0" styleClass="card">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="523.0" spacing="160.0">
+                     <children>
+                        <Text fill="#ec892f" strokeType="OUTSIDE" strokeWidth="0.0" text="Due Soon">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </HBox>
+                  <VBox fx:id="taskContainer" alignment="TOP_CENTER" prefHeight="336.0" prefWidth="513.0" stylesheets="@../../css/task.css">
+                     <padding>
+                        <Insets bottom="20.0" left="35.0" right="35.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Text fx:id="allTasks" fill="#ec892f" onMouseClicked="#openTasks" strokeType="OUTSIDE" strokeWidth="0.0" text="All Tasks">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow height="13.0" radius="6.0" width="13.0">
+                     <color>
+                        <Color red="0.3953000009059906" green="0.5445700287818909" blue="0.5899999737739563" opacity="0.6391304135322571" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="203.0" layoutY="52.0" prefHeight="450.0" prefWidth="429.0" styleClass="card">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="160.0">
+                     <children>
+                        <Text fx:id="due_title1" fill="#ec892f" strokeType="OUTSIDE" strokeWidth="0.0" text="My Lists">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </HBox>
+                  <VBox fx:id="groupContainer" alignment="TOP_CENTER" prefHeight="336.0" prefWidth="513.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Text fx:id="allLists" fill="#ec892f" onMouseClicked="#openLists" strokeType="OUTSIDE" strokeWidth="0.0" text="All Lists">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Text>
+                     </children>
+                     <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow height="13.0" radius="6.0" width="13.0">
+                     <color>
+                        <Color red="0.3953000009059906" green="0.5445700287818909" blue="0.5899999737739563" opacity="0.6399999856948853" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </VBox>
+            <VBox layoutX="703.0" layoutY="40.0" prefHeight="450.0" prefWidth="173.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="newTask" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addTask" prefHeight="56.0" prefWidth="173.0" styleClass="right-button" text="Add Task">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontIcon fill="WHITE" iconLiteral="mdi-checkbox-multiple-marked-outline" iconSize="28" strokeType="OUTSIDE" strokeWidth="0.0" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="13.0" radius="6.0" width="13.0">
+                           <color>
+                              <Color red="0.3808000087738037" green="0.521173357963562" blue="0.5600000023841858" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="newList" layoutX="10.0" layoutY="86.0" mnemonicParsing="false" onAction="#addList" prefHeight="56.0" prefWidth="173.0" styleClass="right-button" text="Add List">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontIcon fill="WHITE" iconLiteral="mdi-playlist-check" iconSize="33" strokeType="OUTSIDE" strokeWidth="0.0" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>

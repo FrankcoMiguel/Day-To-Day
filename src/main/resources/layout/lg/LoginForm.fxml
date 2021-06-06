@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<AnchorPane fx:id="loginForm" prefHeight="427.0" prefWidth="346.0" styleClass="form" stylesheets="@../../css/login.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <HBox alignment="CENTER" layoutX="58.0" layoutY="90.0" spacing="5.0">
+         <children>
+            <FontIcon fill="#ec892f" iconLiteral="las-user" iconSize="26" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <JFXTextField focusColor="#ec892f" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="Email">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="60.0" layoutY="161.0" spacing="5.0">
+         <children>
+            <FontIcon fill="#ec892f" iconLiteral="las-lock" iconSize="23" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <JFXPasswordField focusColor="#ec892f" labelFloat="true" prefHeight="30.0" prefWidth="200.0" promptText="Password">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+      </HBox>
+      <JFXButton fx:id="login" defaultButton="true" layoutX="98.0" layoutY="237.0" mnemonicParsing="false" onAction="#loginApp" prefHeight="41.0" prefWidth="153.0" ripplerFill="#febb6c" style="-fx-text-fill: white;" styleClass="form-button" text="Login" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <HBox alignment="CENTER" layoutX="87.0" layoutY="315.0" spacing="2.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?" />
+            <Text fx:id="register" fill="#ec892f" onMouseClicked="#switchToSignup" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+   <effect>
+      <DropShadow height="12.0" radius="5.5" width="12.0">
+         <color>
+            <Color red="0.3034000098705292" green="0.6736299991607666" blue="0.8199999928474426" opacity="0.643478274345398" />
+         </color>
+      </DropShadow>
+   </effect>
+</AnchorPane>

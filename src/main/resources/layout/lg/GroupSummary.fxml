@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="list" alignment="CENTER" prefHeight="40.0" prefWidth="360.0" spacing="30.0" styleClass="task" stylesheets="@../../css/task.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GroupSummaryController">
+    <children>
+          <Text fx:id="name" fill="#ec892f" strokeType="OUTSIDE" strokeWidth="0.0" text="Chores" wrappingWidth="150.0">
+              <font>
+                  <Font name="Arial Bold" size="16.0" />
+              </font>
+          </Text>
+      <Text fx:id="count" fill="#ec892f" layoutX="10.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1/5" textAlignment="CENTER" wrappingWidth="135.0">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Text>
+    </children>
+    <padding>
+        <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+    </padding>
+</HBox>

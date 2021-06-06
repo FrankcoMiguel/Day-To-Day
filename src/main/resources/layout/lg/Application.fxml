@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<StackPane fx:id="app" prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ApplicationController">
+   <children>
+      <VBox fx:id="main" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1366.0" stylesheets="@../../css/application.css">
+          <children>
+              <AnchorPane prefHeight="150.0" prefWidth="1250.0">
+                  <children>
+                      <ImageView fitHeight="68.0" fitWidth="56.0" layoutX="93.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../media/logotype-md.png" />
+                          </image>
+                      </ImageView>
+                  <HBox alignment="CENTER" layoutX="380.0" layoutY="40.0" spacing="35.0">
+                     <children>
+                        <JFXButton fx:id="dashboard" alignment="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="179.0" styleClass="tab-button-active" text="Dashboard" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontIcon fx:id="dashboardIcon" fill="#febb6c" iconLiteral="mdi-view-dashboard" iconSize="24" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tab-button-icon-active" text="" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="tasks" alignment="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="179.0" styleClass="tab-button" text="Tasks" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontIcon fx:id="taskIcon" fill="#febb6c" iconLiteral="mdi-checkbox-multiple-marked" iconSize="24" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tab-button-icon" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="lists" alignment="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="179.0" styleClass="tab-button" text="Lists" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontIcon fx:id="listIcon" fill="#febb6c" iconLiteral="mdi-clipboard-text" iconSize="24" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="tab-button-icon" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <FontIcon fx:id="logout" fill="#febb6c" iconLiteral="mdi-logout" iconSize="28" layoutX="1249.0" layoutY="77.0" onMouseClicked="#logout" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+                  </children>
+              </AnchorPane>
+            <VBox fx:id="container" alignment="CENTER" prefHeight="700.0" prefWidth="1250.0" />
+          </children>
+      </VBox>
+   </children>
+</StackPane>

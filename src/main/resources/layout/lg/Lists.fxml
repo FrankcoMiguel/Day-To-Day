@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.0" prefWidth="1300.0" spacing="10.0" stylesheets="@../../css/dashboard.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListsController">
+    <children>
+        <HBox alignment="CENTER">
+            <children>
+                <Text fill="#ec892f" strokeType="OUTSIDE" strokeWidth="0.0" text="All Lists">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+        </HBox>
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="797.0" prefWidth="1300.0" spacing="25.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="573.0" prefWidth="1300.0" styleClass="card">
+                    <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="620.0" prefWidth="1300.0" styleClass="card">
+                     <content>
+                        <HBox alignment="CENTER_LEFT" prefWidth="1300.0" spacing="4.0">
+                           <children>
+                              <VBox fx:id="listContainerLeft" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefWidth="400.0" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="listContainerCenter" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefWidth="400.0" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="listContainerRight" alignment="TOP_CENTER" layoutX="1240.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefWidth="400.0" spacing="10.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </content>
+                        </ScrollPane>
+                    </children>
+                    <effect>
+                        <DropShadow height="13.0" radius="6.0" width="13.0">
+                            <color>
+                                <Color red="0.3953000009059906" green="0.5445700287818909" blue="0.5899999737739563" opacity="0.6391304135322571" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets top="30.0" />
+    </padding>
+</VBox>
