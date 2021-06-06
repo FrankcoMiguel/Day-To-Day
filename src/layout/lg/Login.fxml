@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="main" alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1400.0" stylesheets="@../../css/login.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+        <AnchorPane prefHeight="126.0" prefWidth="1400.0">
+            <children>
+                <ImageView fitHeight="68.0" fitWidth="56.0" layoutX="50.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../media/logotype-md.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="732.0" prefWidth="1554.0">
+            <children>
+                <ImageView fitHeight="334.0" fitWidth="1554.0" layoutY="537.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../media/wave.png" />
+                    </image>
+                </ImageView>
+                <VBox alignment="BOTTOM_CENTER" layoutX="607.0" layoutY="34.0" prefHeight="612.0" prefWidth="341.0" spacing="40.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="138.0" prefWidth="346.0" spacing="5.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!">
+                                    <font>
+                                        <Font name="Arial" size="28.0" />
+                                    </font>
+                                </Text>
+                                <Text layoutX="135.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log into your account">
+                                    <font>
+                                        <Font name="Arial" size="16.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                  <StackPane fx:id="formBox" prefHeight="495.0" prefWidth="341.0" />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

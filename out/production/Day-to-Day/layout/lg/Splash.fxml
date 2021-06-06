@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="main" prefHeight="850.0" prefWidth="1250.0" stylesheets="@../../css/splash.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashController">
+   <children>
+      <VBox fx:id="contentRoot" alignment="CENTER" prefHeight="64.0" prefWidth="899.0" spacing="20.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="180.0" prefWidth="1250.0">
+               <children>
+                  <ImageView fitHeight="137.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../media/logotype-lg.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="80.0" right="50.0" top="30.0" />
+               </padding>
+            </HBox>
+            <JFXProgressBar fx:id="loader" prefHeight="8.0" prefWidth="375.0" progress="0.0" />
+            <Label fx:id="loader_status" styleClass="loader_status" text="63%" textFill="#febb6c">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

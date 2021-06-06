@@ -1,0 +1,36 @@
+.task {
+
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 0.4;
+    -fx-border-color: #707070;
+
+}
+
+.full-task {
+
+    -fx-border-style: solid solid solid solid;
+    -fx-border-width: 0.4;
+    -fx-border-color: #707070;
+
+}
+
+.label-low {
+
+    -fx-background-color: #82E188;
+    -fx-text-fill: #000000;
+
+}
+
+.label-medium {
+
+    -fx-background-color: #ECE586;
+    -fx-text-fill: #000000;
+
+}
+
+.label-high {
+
+    -fx-background-color: #F56C5C;
+    -fx-text-fill: #000000;
+
+}

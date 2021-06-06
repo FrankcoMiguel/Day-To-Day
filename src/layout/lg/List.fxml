@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<VBox prefHeight="405.0" prefWidth="402.0" style="-fx-background-color: #ffffff;" styleClass="task" stylesheets="@../../css/task.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="128.0" prefWidth="402.0">
+         <children>
+                <Text fx:id="name" fill="#ec892f" strokeType="OUTSIDE" strokeWidth="0.0" text="List" textAlignment="CENTER" wrappingWidth="401.13671875">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Text>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="201.0" prefWidth="402.0" spacing="20.0">
+         <children>
+            <Text fx:id="createdOn" fill="#ec892f" strokeType="OUTSIDE" strokeWidth="0.0" text="Created on:" wrappingWidth="321.13671875">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="lastUpdate" fill="#ec892f" layoutX="50.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last update:" wrappingWidth="321.13671875">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="tasksCompleted" fill="#ec892f" layoutX="50.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tasks Completed" wrappingWidth="321.13671875">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="totalTasks" fill="#ec892f" layoutX="50.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Tasks" wrappingWidth="321.13671875">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="103.0" prefWidth="402.0" spacing="5.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="77.0" spacing="2.0">
+               <children>
+                  <FontIcon fill="#eb2f2f" iconColor="#316ceb" iconLiteral="mdi-pencil" iconSize="24" onMouseClicked="#editList" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="3.0" />
+                     </HBox.margin>
+                  </FontIcon>
+                  <Label fx:id="edit" alignment="BOTTOM_RIGHT" onMouseClicked="#editList" text="Edit" textFill="#316ceb" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="173.0" layoutY="30.0" prefHeight="44.0" prefWidth="77.0" spacing="2.0">
+               <children>
+                  <FontIcon fill="#eb2f2f" iconLiteral="mdi-delete" iconSize="24" onMouseClicked="#removeList" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="3.0" />
+                     </HBox.margin>
+                  </FontIcon>
+                  <Label fx:id="remove" alignment="BOTTOM_RIGHT" onMouseClicked="#removeList" text="Delete" textFill="#eb2f2f" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="35.0" right="35.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

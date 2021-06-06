@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<JFXDialogLayout maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" stylesheets="@../../css/new-task.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListFormController">
+   <children>
+      <VBox prefHeight="550.0" prefWidth="600.0" spacing="40.0">
+         <children>
+            <Text fx:id="title" fill="#ec892f" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new list">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <VBox prefHeight="599.0" prefWidth="480.0" spacing="30.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <JFXTextField fx:id="name" focusColor="#ec892f" labelFloat="true" onKeyTyped="#resetField" onMouseClicked="#resetField" prefHeight="37.0" prefWidth="420.0" promptText="Title">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="69.0" prefWidth="480.0" spacing="15.0">
+                     <children>
+                        <JFXButton fx:id="done" layoutX="341.0" layoutY="23.0" mnemonicParsing="false" onAction="#saveList" prefHeight="35.0" prefWidth="101.0" ripplerFill="#fcba6f" styleClass="done-button" text="Done" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                        <JFXButton fx:id="cancel" layoutX="361.0" layoutY="27.0" mnemonicParsing="false" onAction="#cancelList" prefHeight="35.0" prefWidth="108.0" ripplerFill="#febb6c" text="Cancel" textFill="#ec892f">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="60.0" right="60.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets top="-28.0" />
+   </padding>
+</JFXDialogLayout>
